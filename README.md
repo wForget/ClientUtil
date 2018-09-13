@@ -1,0 +1,1 @@
+ClientUtil 里面存放一些客户端的工具类，如mongo、kafka、hbase、druid、hive、redis、elasticsearch等
