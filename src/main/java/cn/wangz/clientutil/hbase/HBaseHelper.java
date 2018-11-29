@@ -1,5 +1,6 @@
 package cn.wangz.clientutil.hbase;
 
+import cn.wangz.clientutil.util.ExceptionUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;
@@ -14,6 +15,24 @@ import java.util.List;
  */
 public class HBaseHelper {
     private static Logger logger = Logger.getLogger(HBaseHelper.class);
+
+    private static HBaseHelper instance;
+
+    public static HBaseHelper getInstance() {
+        if (instance == null) {
+            synchronized (HBaseHelper.class) {
+                if (instance == null) {
+                    try {
+                        instance = new HBaseHelper(HBaseConf.zkClinePort, HBaseConf.zkQuorum);
+                    } catch (Exception e) {
+                        String errMsg = ExceptionUtil.stackTraceMsg(e);
+                        logger.error(errMsg);
+                    }
+                }
+            }
+        }
+        return instance;
+    }
 
     private Configuration conf = HBaseConfiguration.create();
     private Connection connection = null;

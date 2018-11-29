@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * Created by Administrator on 2017/9/4.
  */
-public class ElasticSearchProperty extends BaseConf {
+public class ElasticSearchConf extends BaseConf {
 
     public static int bulkActions = conf.getInt("elasticsearch.bulkactions");
 

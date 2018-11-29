@@ -40,7 +40,7 @@ public class ElasticSearchBulkUtil {
         try {
             //需要用户名密码
 //            client = new PreBuiltXPackTransportClient(settings);
-//            List<Map> list = ElasticSearchProperty.transportAddressList;
+//            List<Map> list = ElasticSearchConf.transportAddressList;
 //            for (Map<String, Object> addr : list) {
 //                client.addTransportAddress(
 //                        new InetSocketTransportAddress(
@@ -49,7 +49,7 @@ public class ElasticSearchBulkUtil {
 //            }
 
             client = new PreBuiltTransportClient(settings);
-            List<Map> transportAddressList = ElasticSearchProperty.transportAddressList;
+            List<Map> transportAddressList = ElasticSearchConf.transportAddressList;
             for (int i = 0; i < transportAddressList.size(); i++) {
                 client.addTransportAddress(
                         new InetSocketTransportAddress(
@@ -75,9 +75,9 @@ public class ElasticSearchBulkUtil {
             public void afterBulk(long l, BulkRequest bulkRequest, Throwable throwable) {
 
             }
-        }).setBulkActions(ElasticSearchProperty.bulkActions)
+        }).setBulkActions(ElasticSearchConf.bulkActions)
                 .setConcurrentRequests(0)
-                .setFlushInterval(TimeValue.timeValueSeconds(ElasticSearchProperty.flushInterval))
+                .setFlushInterval(TimeValue.timeValueSeconds(ElasticSearchConf.flushInterval))
                 .build();
     }
 

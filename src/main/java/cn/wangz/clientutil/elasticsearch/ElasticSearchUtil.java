@@ -28,7 +28,7 @@ public class ElasticSearchUtil {
                 .build();
         try {
             client = new PreBuiltTransportClient(settings);
-            List<Map> list = ElasticSearchProperty.transportAddressList;
+            List<Map> list = ElasticSearchConf.transportAddressList;
             for (Map<String, Object> addr : list) {
                 client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName((String) addr.get("host")), (Integer) addr.get("port")));
             }

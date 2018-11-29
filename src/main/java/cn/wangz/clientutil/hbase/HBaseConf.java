@@ -5,7 +5,7 @@ import cn.wangz.clientutil.conf.BaseConf;
 /**
  * Created by hadoop on 2018/1/23.
  */
-public class HBaseProperty extends BaseConf {
+public class HBaseConf extends BaseConf {
 
     public static int zkClinePort = conf.getInt("hbase.zookeeper.property.clientPort");
 
