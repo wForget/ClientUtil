@@ -12,11 +12,11 @@ import java.util.List;
  */
 public class MongoConf extends BaseConf {
 
-	public static String db = conf.getString("mongo.db");
+	public static String DB = conf.getString("mongo.db");
 
-	public static String col = conf.getString("mongo.col");
+	public static String COL = conf.getString("mongo.col");
 
-	public static List<ServerAddress> serverAddress = null;
+	public static List<ServerAddress> SERVER_ADDRESS = null;
 	static {
 		String cluster = conf.getString("mongo.cluster");
 		List<ServerAddress> serverAddresses = new ArrayList<ServerAddress>();
@@ -27,6 +27,6 @@ public class MongoConf extends BaseConf {
 			int port = Integer.valueOf(serverAddressStr.split(":")[1]);
 			serverAddresses.add(new ServerAddress(host, port));
 		}
-		serverAddress = serverAddresses;
+		SERVER_ADDRESS = serverAddresses;
 	}
 }
