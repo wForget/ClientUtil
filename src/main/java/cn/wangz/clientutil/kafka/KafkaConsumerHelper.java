@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Created by hadoop on 2018/9/13.
@@ -44,6 +45,7 @@ public class KafkaConsumerHelper {
 
         consumer = new KafkaConsumer<String, String>(props);
         consumer.subscribe(this.topic);
+//        consumer.subscribe(this.topic, new RebalanceFlagListener(this.rebalanceFlag));
     }
 
     public ConsumerRecords<String, String> poll() {
@@ -60,4 +62,9 @@ public class KafkaConsumerHelper {
             consumer.close();
         }
     }
+
+//    private AtomicBoolean rebalanceFlag;
+//    public boolean isRebalance() {
+//        return rebalanceFlag.compareAndSet(true, false);
+//    }
 }
