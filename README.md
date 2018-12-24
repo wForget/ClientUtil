@@ -9,3 +9,5 @@
 + hive
 + redis
 + elasticsearch
++ gson
++ html charset
