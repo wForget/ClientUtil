@@ -14,7 +14,7 @@
         <log4j.version>2.8.1</log4j.version>
 
         <hbase.version>1.2.0</hbase.version>
-        <cdh.version>5.8.0</cdh.version>
+        <cdh.version>5.13.2</cdh.version>
 
 
     </properties>
@@ -73,6 +73,26 @@
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase-client</artifactId>
             <version>${hbase.version}-cdh${cdh.version}</version>
+        </dependency>
+
+        <!-- phoenix -->
+        <dependency>
+            <groupId>org.apache.phoenix</groupId>
+            <artifactId>phoenix-core</artifactId>
+            <version>4.14.0-cdh${cdh.version}</version>
+        </dependency>
+        <!-- dbcp2 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
+        <!-- hive -->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <version>1.1.0-cdh${cdh.version}</version>
         </dependency>
 
         <!-- druid -->

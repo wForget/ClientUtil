@@ -11,8 +11,6 @@ import java.util.regex.Pattern;
 
 /**
  * 处理数据通用方法
- * @author yangqi
- * @date 2013-11-27 上午10:57:46   
  *
  */
 public class HtmlUtil {
