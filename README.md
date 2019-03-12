@@ -11,3 +11,4 @@
 + elasticsearch
 + gson
 + html charset
++ phoenix dbcp
