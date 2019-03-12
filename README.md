@@ -9,6 +9,10 @@
 + hive
 + redis
 + elasticsearch
++ phoenix dbcp
+
+其他工具：
+
++ mail
 + gson
 + html charset
-+ phoenix dbcp
