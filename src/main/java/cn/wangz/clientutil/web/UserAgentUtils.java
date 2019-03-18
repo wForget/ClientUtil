@@ -1,4 +1,4 @@
-package cn.wangz.clientutil.html;
+package cn.wangz.clientutil.web;
 
 import nl.basjes.parse.useragent.UserAgent;
 import nl.basjes.parse.useragent.UserAgentAnalyzer;

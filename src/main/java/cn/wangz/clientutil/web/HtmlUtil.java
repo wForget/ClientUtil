@@ -1,4 +1,4 @@
-package cn.wangz.clientutil.html;
+package cn.wangz.clientutil.web;
 
 import info.monitorenter.cpdetector.io.CodepageDetectorProxy;
 import info.monitorenter.cpdetector.io.JChardetFacade;
