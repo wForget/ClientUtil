@@ -15,8 +15,6 @@
 
         <hbase.version>1.2.0</hbase.version>
         <cdh.version>5.13.2</cdh.version>
-
-
     </properties>
 
     <dependencies>

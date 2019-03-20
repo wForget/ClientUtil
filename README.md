@@ -18,3 +18,4 @@
 + Html charset
 + UserAgent
 + AES
++ Log count
