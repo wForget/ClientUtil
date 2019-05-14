@@ -10,6 +10,7 @@
 + Redis
 + Elasticsearch
 + Phoenix dbcp
++ Kudu
 
 其他工具：
 
