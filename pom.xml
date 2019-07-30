@@ -182,6 +182,18 @@
             <artifactId>kudu-client</artifactId>
             <version>1.5.0-cdh5.13.1</version>
         </dependency>
+
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.4.1</version>
+        </dependency>
     </dependencies>
 
     <build>

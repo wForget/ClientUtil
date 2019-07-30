@@ -1,6 +1,7 @@
 package cn.wangz.clientutil;
 
 import cn.wangz.clientutil.hive.HiveServer;
+import com.alibaba.fastjson.JSONObject;
 import org.junit.Test;
 
 import java.sql.ResultSet;

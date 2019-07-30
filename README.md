@@ -19,4 +19,6 @@
 + Html charset
 + UserAgent
 + AES
++ Base64
 + Log count
++ Thread CountableThreadPool

@@ -7,7 +7,9 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.JedisPubSub;
 
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -166,12 +168,53 @@ public class RedisServer {
         }
     }
 
-    public void test() {
-        try (Jedis jedis = getJedis()) {
-
-        } catch (Exception e) {
-            String msg = ExceptionUtil.stackTraceMsg(e);
-            logger.error(msg);
-        }
-    }
+//    public static void main(String[] args) {
+//        JedisPoolConfig config = new JedisPoolConfig();
+//        config.setMaxTotal(50);
+//        config.setMaxIdle(20);
+//        config.setMaxWaitMillis(3000);
+//        config.setTestOnBorrow(true);
+//        config.setTestOnReturn(true);
+//
+//        jedisPool = new JedisPool(config, "dmp-test05"
+//                , 6380, 3000, null, 0);
+//
+//        String script = "local key = KEYS[1];\n" +
+//                        "local score = tonumber(ARGV[1]);\n" +
+//                        "local value = ARGV[2];\n" +
+//                        "local maxNum = tonumber(ARGV[3]);\n" +
+//                        "redis.call('ZADD', key, score, value);\n" +
+//                        "local num = tonumber(redis.call('ZCARD', key));\n" +
+//                        "if num > maxNum then\n" +
+//                        "    redis.call('ZREMRANGEBYRANK', key, 0, num - maxNum - 1);\n" +
+//                        "end";
+//        String script2 = "local key = KEYS[1];\n" +
+//                "local value = tonumber(ARGV[1]);\n" +
+//                "local hash = redis.call('HMGET', key, 'max', 'min');\n" +
+//                "if hash and next(hash) then\n" +
+//                "    local max = hash[1];\n" +
+//                "    local min = hash[2];\n" +
+//                "    if max == false or value > tonumber(max) then\n" +
+//                "        redis.call('HSET', key, 'max', value)\n" +
+//                "    end\n" +
+//                "    if min == false or value < tonumber(min) then\n" +
+//                "        redis.call('HSET', key, 'min', value)\n" +
+//                "    end\n" +
+//                "else\n" +
+//                "    redis.call('HMSET', key, 'max', value, 'min', value);\n" +
+//                "end";
+//        try (Jedis jedis = jedisPool.getResource()){
+//            for (char s: "abcdefghijklmn".toCharArray()) {
+//                List<String> params = Arrays.asList(String.valueOf(System.currentTimeMillis()), String.valueOf(s), "10");
+//                jedis.eval(script, Arrays.asList("test"), params);
+//                System.out.println(params);
+//            }
+////            Object reslut = jedis.eval(script2, Arrays.asList("test2"), Arrays.asList("110"));
+////            System.out.println(reslut);
+//        } finally {
+//            if (jedisPool != null) {
+//                jedisPool.close();
+//            }
+//        }
+//    }
 }
