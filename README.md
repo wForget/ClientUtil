@@ -11,17 +11,3 @@
 + Elasticsearch
 + Phoenix dbcp
 + Kudu
-
-其他工具：
-
-+ Mail
-+ Gson
-+ Html charset
-+ UserAgent
-+ AES
-+ Base64
-+ Log count
-+ Thread CountableThreadPool
-+ Cache CacheModule
-+ DateUtils
-+ JavaScriptUtils
