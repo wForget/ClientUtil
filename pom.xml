@@ -79,6 +79,7 @@
             <artifactId>phoenix-core</artifactId>
             <version>4.14.0-cdh${cdh.version}</version>
         </dependency>
+
         <!-- dbcp2 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -99,7 +100,7 @@
 <!--            </exclusions>-->
 <!--        </dependency>-->
 
-        <!-- druid -->
+        <!-- druid.io -->
         <dependency>
             <groupId>in.zapr.druid</groupId>
             <artifactId>druidry</artifactId>
